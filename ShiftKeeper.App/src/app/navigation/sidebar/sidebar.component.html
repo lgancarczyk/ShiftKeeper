@@ -1,0 +1,30 @@
+<div class="sideNavContainer">
+  <div class="userIconContainer contentRow">
+    <img class="userIcon" src={{imagePath}} (click)="userIconClick()">
+  </div>
+
+  <ng-container *ngIf="!isLoggedIn">
+    <div class="buttonsContainer contentRow">
+      <button mat-raised-button color="primary" (click)="onLogin()">Log In</button>
+      <button mat-stroked-button color="accent" (click)="onRegister()">Register</button>
+    </div>
+    <hr>
+  </ng-container>
+
+  <ng-container *ngIf="isLoggedIn">
+    <hr>
+      <div class="navigationContainer">
+        <app-owned-companies></app-owned-companies>
+      </div>
+    <hr>
+  </ng-container>
+
+  <div class="navigationContainer">
+    <mat-list role="list">
+      <a href="#"><mat-list-item role="listitem">Pricing</mat-list-item></a>
+      <a href="#"><mat-list-item role="listitem">About</mat-list-item></a>
+    </mat-list>
+  </div>
+  <button *ngIf="isLoggedIn" mat-raised-button class="logoutButton" (click)="onLogout('50ms', '50ms')">Log Out</button>
+  
+</div>

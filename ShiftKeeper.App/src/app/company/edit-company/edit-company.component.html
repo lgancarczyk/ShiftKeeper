@@ -1,0 +1,72 @@
+<!-- <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div> -->
+
+<div class="contentContainer">
+    <div class="pageContentContainer">
+        <div class="formContainer" [formGroup]="form">
+            <div class="userIconContainer">
+                <img class="userIcon" [src]="imagePath" *ngIf="imagePath">
+            </div>
+            <input type="file" hidden accept="image/*" #file (change)="selectFile($event)">
+        
+            <div class="imageButtonContainer">
+                <button style="width: 100%;" mat-raised-button color="primary" (click)="file.click()">Add image</button>
+                <button mat-icon-button color="warn" (click)="onDeleteImage()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        
+            
+            <mat-form-field class="mt--1">
+                <mat-label>Company Name</mat-label>
+                <input type="text" matInput formControlName="companyName">
+                <mat-error *ngIf="form.controls.companyName.hasError('required')">
+                    Company Name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        
+            <mat-form-field class="mt--1">
+                <mat-label>Add your company description</mat-label>
+                <textarea  matInput placeholder="Ex. We are small company with ..." formControlName="companyDescription"></textarea>
+              </mat-form-field>
+        
+            <button class="saveButton" mat-raised-button color="primary" (click)="onSave()"> Save</button>
+        </div>
+        <hr>
+        <div class="manageUsersContainer">
+            <h1>Users</h1>
+            <div class="usersContainer">
+                <h2>Pending Users</h2>
+                <div *ngFor="let user of company.pendingUsers" class="userListElement">
+                    <span>{{user.name}} {{user.surname}}</span>
+                    <div class="buttonContainer">
+                        <button mat-flat-button color="warn" (click)="onDeny(user.id)">
+                            <mat-icon>cancel</mat-icon>
+                            Deny
+                        </button>
+                        <button mat-flat-button (click)="onAdd(user.id)">
+                            <mat-icon>add_circle</mat-icon>
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="usersContainer">
+                <h2>Active Users</h2>
+                <div *ngFor="let user of company.users" class="userListElement">
+                    <span>{{user.name}} {{user.surname}}</span>
+                    <div class="buttonContainer">
+                        <button mat-flat-button color="warn" (click)="onRemove(user.id)">
+                            <mat-icon>remove_circle</mat-icon>
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

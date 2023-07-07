@@ -1,0 +1,10 @@
+<div class="dateSelectorContainer">
+    <ng-container *ngFor="let item of weekDays; let indexOfelement=index">
+        <button class="dateItem" (click)="onDateSelectorClick(item.date)">
+            <p>{{ item.day }}</p>
+            <span [ngClass]="{'acitveDay' : indexOfelement == activeDayIndex}">
+                {{ item.date.getDate() }}
+            </span>
+        </button>
+    </ng-container>
+</div>

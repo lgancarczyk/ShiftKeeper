@@ -1,0 +1,17 @@
+<div>
+  <div class="listHeader">
+    <mat-icon> format_list_bulleted</mat-icon>
+    My Companies
+  </div>
+  <div class="companiesListNavigation">
+    <div *ngFor="let company of companies">
+      <button mat-button (click)="onCompanyClick(company)">
+        {{company.companyName}}
+      </button>
+    </div>
+    <button mat-button (click)="onAddCompany('50ms', '50ms')">
+      <mat-icon>add</mat-icon>
+      Add Company
+    </button>
+  </div>
+</div>

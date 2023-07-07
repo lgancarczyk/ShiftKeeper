@@ -1,0 +1,17 @@
+<div class="contentContainer">
+    <app-date-selector></app-date-selector>
+
+    <div class="pageContentContainer">
+        <app-add-event *ngIf="showAddEvent"></app-add-event>
+
+        <div [ngClass]="{'acitveDay' : !showAddEvent}" class="dateAndButtonContainer">
+            <h2>2 July</h2>
+            <button mat-raised-button color="primary">
+                <mat-icon>add</mat-icon>
+                Add
+            </button>
+        </div>
+        <app-calendar-event></app-calendar-event>
+    </div>
+
+</div>

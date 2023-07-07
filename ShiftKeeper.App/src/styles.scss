@@ -1,0 +1,91 @@
+// @import 'node_modules/bootstrap/scss/bootstrap';
+ @import "node_modules/bootstrap-icons/font/bootstrap-icons.css";
+// @import 'node_modules/mdb-ui-kit/css/mdb.min.css';
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0px;
+    padding: 0px;
+}
+body { height: 100vh; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+.contentRow{
+    margin-top: 20px;
+}
+
+hr 
+{ 
+ width: 80%;
+ margin: 3em auto; 
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0px;
+}
+
+hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contentContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.pageContentContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountQuestion{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.textLink{
+    font-weight: 500;
+    color: skyblue;
+}
+
+.mt--2{
+    margin-top: 2rem;
+}
+.mt--1-5{
+    margin-top: 1.5rem;
+}
+.mt--1{
+    margin-top: 1rem;
+}
+
+.mt--0-5{
+    margin-top: 0.5rem;
+}
+
+.userIconContainer{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-self: center;
+    position: relative;
+    border-radius: 90px;
+    overflow: hidden;
+
+}
+
+.userIcon{
+    width: 100%;
+    height: 100%;
+}

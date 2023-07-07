@@ -1,0 +1,43 @@
+<div class="contentContainer">
+    <div class="pageContentContainer">
+
+        <div class="userIconContainer contentRow">
+            <img class="userIcon" src={{imagePath}}>
+        </div>
+        <div class="contentRow companyTitle">
+            <h2>{{ company.companyName}}</h2>
+        </div>
+        <div class="contentRow companyDescription">
+            {{ company.companyDescription}}
+        </div>
+        <hr>
+        <button *ngIf="userBelongsToCompany" mat-raised-button color="primary" (click)="onGotoCalendar()">
+            <mat-icon>calendar_today</mat-icon>
+            Go To Calendar
+        </button>
+        <div class="contentRow parametersContainer">
+            <div>
+                <b>Owner:</b> {{company.owner.name}} {{company.owner.surname}} 
+            </div>
+            <div *ngIf="!userBelongsToCompany" class="usersCounter" >
+                <b>Connected:</b> {{company.users}} users (join to see the users)
+            </div>
+            <div *ngIf="userBelongsToCompany" class="usersList" >
+                <h1>Users</h1>
+                <div *ngFor="let user of company.users" class="usersListElement">
+                    <span>{{user.name}} {{user.surname}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="contentRow">
+            <button mat-raised-button color="accent" *ngIf="!userBelongsToCompany"> Join </button>
+        </div>
+        <div class="contentRow">
+            <button mat-raised-button color="primary" *ngIf="userIsOwner" class="manageCompanyButton" (click)="onManage()">
+                <mat-icon>settings</mat-icon>
+                Manage
+            </button>
+        </div>
+    </div>
+    
+</div>

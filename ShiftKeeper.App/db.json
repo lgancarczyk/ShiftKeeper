@@ -1,0 +1,91 @@
+{
+  "user": [
+    {
+      "email": "a@a.pl",
+      "password": "haslo",
+      "confirmPassword": "haslo",
+      "jwt": "egzampleJWT",
+      "id": "a@a.pl",
+      "ownedCompanies": [
+        {
+          "companyId": 1
+        },
+        {
+          "companyId": 2
+        }
+      ],
+      "joinedCompanies": [
+        {
+          "companyId": 10
+        },
+        {
+          "companyId": 11
+        }
+      ]
+    },
+    {
+      "email": "b@b.pl",
+      "password": "haslo",
+      "confirmPassword": "haslo",
+      "id": 2
+    },
+    {
+      "email": "ll@ll.pl",
+      "password": "haslo",
+      "confirmPassword": "haslo",
+      "id": "IKS7uQc"
+    },
+    {
+      "email": "r@r.pl",
+      "password": "haslo",
+      "confirmPassword": "haslo",
+      "id": "swSvl4z"
+    }
+  ],
+  "company": [
+    {
+      "companyDescription": "Jesteśmy młodą rozwijająca się firmą stawiającą na realizację i rozjów innowacyjnych metod nauki pływania.",
+      "companyName": "SwimPro",
+      "owner": {
+        "id": "a@a.pl",
+        "name": "Anna",
+        "surname": "Lewandowska"
+      },
+      "imageUrl": "",
+      "id": 1,
+      "users": [
+        {
+          "id": 5,
+          "name": "David",
+          "surname": "Marsel"
+        },
+        {
+          "id": 3,
+          "name": "Maria",
+          "surname": "Hansel"
+        }
+      ],
+      "pendingUsers": [
+        {
+          "id": 9,
+          "name": "Maryla",
+          "surname": "Rodowicz"
+        },
+        {
+          "id": 12,
+          "name": "Andrzej",
+          "surname": "Gołota"
+        }
+      ]
+    },
+    {
+      "companyName": "myCompany",
+      "owner": {
+        "id": "a@a.pl",
+        "name": "lukasz",
+        "surname": "gancarczyk"
+      },
+      "id": 2
+    }
+  ]
+}

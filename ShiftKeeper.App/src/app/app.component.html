@@ -1,0 +1,7 @@
+<app-toolbar (navToggle)="sidenav.toggle()"></app-toolbar>
+<mat-sidenav-container class="mainContainer">
+    <mat-sidenav #sidenav mode='over'>
+      <app-sidebar (sidenav)="sidenav.toggle()" (closeSidenav)="sidenav.close()"></app-sidebar>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
